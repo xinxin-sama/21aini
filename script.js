@@ -38,8 +38,8 @@ function renderText() {
     // 初始位置
     const initialProgress = i / lovePhrases.length;
     const { x, y } = getHeartCoordinates(initialProgress);
-    span.style.left = `${50 + x * 10}%`;
-    span.style.top = `${50 + y * 10}%`;
+    span.style.left = `${50 + x * 5}%`;
+    span.style.top = `${50 + y * 5}%`;
     
     container.appendChild(span);
     return span;
@@ -57,8 +57,8 @@ function updatePositions() {
   textElements.forEach((span, i) => {
     const progress = (i / textElements.length + offset) % 1;
     const { x, y } = getHeartCoordinates(progress);
-    span.style.left = `${50 + x * 10}%`;
-    span.style.top = `${50 + y * 10}%`;
+    span.style.left = `${50 + x * 5}%`;
+    span.style.top = `${50 + y * 5}%`;
   });
   
   animationFrame = requestAnimationFrame(updatePositions);
